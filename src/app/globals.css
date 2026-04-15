@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+@theme {
+  --color-rose-50: #fbf7f8;
+  --color-rose-100: #f6eeef;
+  --color-rose-200: #ebd8da;
+  --color-rose-300: #dbb9bd;
+  --color-rose-400: #c89599;
+  --color-rose-500: #b07075;
+  --color-rose-600: #93565a;
+  --color-rose-700: #7a4649;
+  --color-rose-800: #663d40;
+  --color-rose-900: #563638;
+}
 :root {
   --radius: 0.75rem;
 }

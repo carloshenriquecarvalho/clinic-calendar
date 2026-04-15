@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -24,22 +25,21 @@ export default function RootLayout({
         <div className="w-full lg:max-w-[1000px] min-h-screen lg:min-h-[700px] lg:h-[80vh] flex flex-col lg:flex-row bg-white shadow-none lg:shadow-2xl lg:shadow-zinc-200/50 lg:rounded-[2rem] overflow-hidden relative">
           
           {/* Desktop Sidebar Aesthetics */}
-          <div className="hidden lg:flex lg:w-[45%] bg-rose-50 relative flex-col justify-between p-12 border-r border-rose-100/50">
+          <div className="hidden lg:flex lg:w-[45%] bg-rose-50/30 relative flex-col justify-between p-12 border-r border-rose-100/30">
             <div className="z-10 mt-8">
-              <div className="w-14 h-14 bg-white shadow-sm border border-rose-100 rounded-2xl flex items-center justify-center mb-6 text-rose-600 animate-enter">
-                <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
+              <div className="mb-6 animate-enter">
+                <Image src="/logo.png" alt="Premium Estética" width={150} height={150} className="object-contain" priority />
               </div>
               <h1 className="text-4xl font-light tracking-tight text-zinc-900 animate-enter" style={{ animationDelay: '0.1s', opacity: 0 }}>
-                Clínica de <br/><span className="font-medium text-rose-600">Estética Premium</span>
+                Crystal  <br/><span className="font-medium text-rose-600">Laser e Estética</span>
               </h1>
               <p className="mt-5 text-zinc-500 max-w-sm text-sm leading-relaxed animate-enter" style={{ animationDelay: '0.2s', opacity: 0 }}>
-                Tecnologia, bem-estar e cuidados avançados unidos em um só lugar. Agende agora seu horário.
+                Tecnologia, bem-estar e luxo unidos em um só lugar para nossas pacientes.
               </p>
             </div>
             <div className="z-10 animate-enter" style={{ animationDelay: '0.3s', opacity: 0 }}>
-              <p className="text-xs font-semibold tracking-widest uppercase text-zinc-400">© 2026 Clínica Premium</p>
+              <p className="text-xs font-semibold tracking-widest uppercase text-zinc-400">© 2026 Crystal Laser e Estética</p>
+              <p className="text-xs font-semibold tracking-widest uppercase text-zinc-300 ">MADE BY NEXUS GROWTH</p>
             </div>
           </div>
 
@@ -47,10 +47,8 @@ export default function RootLayout({
           <div className="flex-1 flex flex-col bg-white relative overflow-y-auto">
             {/* Mobile Header (Hidden on Desktop) */}
             <header className="lg:hidden px-6 py-8 flex flex-col items-center bg-white z-10 border-b border-zinc-100">
-              <div className="w-12 h-12 bg-rose-100 rounded-2xl flex items-center justify-center mb-4 text-rose-600 animate-enter">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
+              <div className="mb-3 animate-enter">
+                <Image src="/logo.png" alt="Premium Estética" width={75} height={75} className="object-contain" priority />
               </div>
               <h1 className="text-xl font-medium tracking-tight text-zinc-900 animate-enter" style={{ animationDelay: '0.1s', opacity: 0 }}>
                 Clínica de <span className="text-rose-600">Estética</span>
