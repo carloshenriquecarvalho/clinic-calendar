@@ -70,11 +70,11 @@ export function AppointmentCard({ app, index, isPast }: AppointmentCardProps) {
               app.status === 'COMPLETED' ? 'bg-green-50 text-green-700' : 'bg-rose-50 text-rose-600'
             }`}>
               <Calendar className="w-3.5 h-3.5" />
-              {format(app.dateTime, "dd 'de' MMM", { locale: ptBR })}
+              {format(new Date(app.dateTime), "dd 'de' MMM", { locale: ptBR })}
             </span>
             <span className="text-xs font-semibold text-zinc-400 flex items-center gap-1 mt-1.5">
               <Clock className="w-3.5 h-3.5" />
-              {format(app.dateTime, "HH:mm")}
+              {format(new Date(app.dateTime), "HH:mm")}
             </span>
           </div>
 
