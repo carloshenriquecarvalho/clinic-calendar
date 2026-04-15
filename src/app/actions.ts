@@ -104,10 +104,15 @@ export async function deleteAppointment(id: string) {
 }
 
 export async function getAppointments() {
-  const appointments = await prisma.appointment.findMany({
-    orderBy: {
-      dateTime: 'asc',
-    },
-  })
-  return appointments
+  try {
+    const appointments = await prisma.appointment.findMany({
+      orderBy: {
+        dateTime: 'asc',
+      },
+    })
+    return appointments
+  } catch (err) {
+    console.error("FATAL PRISMA ERROR fetching appointments: ", err)
+    return []
+  }
 }
