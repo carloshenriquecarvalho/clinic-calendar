@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full bg-zinc-50 flex flex-col items-center justify-center lg:p-12 text-zinc-900">
+      <body className="min-h-full bg-zinc-50 flex flex-col items-center justify-center text-zinc-900">
         {/* Responsive wrapper: Mobile-first column natively, transforming to a dual-pane soft card on Desktop */}
         <div className="w-full lg:max-w-[1000px] min-h-screen lg:min-h-[700px] lg:h-[80vh] flex flex-col lg:flex-row bg-white shadow-none lg:shadow-2xl lg:shadow-zinc-200/50 lg:rounded-[2rem] overflow-hidden relative">
           
@@ -46,16 +46,16 @@ export default function RootLayout({
           {/* Main Mobile App Area (also serves as the right pane on Desktop) */}
           <div className="flex-1 flex flex-col bg-white relative overflow-y-auto">
             {/* Mobile Header (Hidden on Desktop) */}
-            <header className="lg:hidden px-6 py-8 flex flex-col items-center bg-white z-10 border-b border-zinc-100">
-              <div className="mb-3 animate-enter">
-                <Image src="/logo.png" alt="Premium Estética" width={75} height={75} className="object-contain" priority />
+            <header className="lg:hidden px-6 py-5 flex flex-col items-center bg-white z-10 border-b border-zinc-100">
+              <div className="mb-2 animate-enter">
+                <Image src="/logo.png" alt="Premium Estética" width={65} height={65} className="object-contain" priority />
               </div>
-              <h1 className="text-xl font-medium tracking-tight text-zinc-900 animate-enter" style={{ animationDelay: '0.1s', opacity: 0 }}>
-                Clínica de <span className="text-rose-600">Estética</span>
+              <h1 className="text-xl font-medium tracking-tight text-zinc-900 animate-enter text-center" style={{ animationDelay: '0.1s', opacity: 0 }}>
+                Crystal <span className="text-rose-600 block sm:inline">Laser e Estética</span>
               </h1>
             </header>
             
-            <main className="flex-1 p-6 lg:p-14 overflow-x-hidden">
+            <main className="flex-1 p-5 lg:p-14 overflow-x-hidden">
               {children}
             </main>
           </div>

@@ -29,7 +29,7 @@ export function SchedulingForm() {
   }
 
   return (
-    <div className="bg-white p-6 rounded-[1.25rem] shadow-sm border border-zinc-100 animate-enter" style={{ animationDelay: '0.2s', opacity: 0 }}>
+    <div className="bg-white p-5 rounded-[1.25rem] shadow-sm border border-zinc-100 animate-enter" style={{ animationDelay: '0.2s', opacity: 0 }}>
       {success && (
         <div className="mb-6 p-4 rounded-xl bg-green-50 text-green-700 text-sm font-medium border border-green-100 flex items-center gap-2">
           Agendamento realizado com sucesso!
@@ -42,7 +42,7 @@ export function SchedulingForm() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-5">
+      <form onSubmit={handleSubmit} className="space-y-4">
         <div className="space-y-1.5">
           <label className="text-sm font-medium text-zinc-900 ml-1 flex items-center gap-2">
             <User className="w-4 h-4 text-rose-500" /> Nome da Cliente
@@ -51,7 +51,7 @@ export function SchedulingForm() {
             type="text" 
             name="clientName" 
             required
-            className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 focus:outline-none focus:ring-2 focus:ring-rose-100 focus:border-rose-500 transition-all text-sm text-zinc-900 placeholder:text-zinc-400"
+            className="w-full px-4 py-2.5 rounded-xl bg-zinc-50 border border-zinc-200 focus:outline-none focus:ring-2 focus:ring-rose-100 focus:border-rose-500 transition-all text-sm text-zinc-900 placeholder:text-zinc-400"
             placeholder="Digite o nome completo"
           />
         </div>
@@ -64,7 +64,7 @@ export function SchedulingForm() {
             type="text" 
             name="aestheticianName" 
             required
-            className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 focus:outline-none focus:ring-2 focus:ring-rose-100 focus:border-rose-500 transition-all text-sm text-zinc-900 placeholder:text-zinc-400"
+            className="w-full px-4 py-2.5 rounded-xl bg-zinc-50 border border-zinc-200 focus:outline-none focus:ring-2 focus:ring-rose-100 focus:border-rose-500 transition-all text-sm text-zinc-900 placeholder:text-zinc-400"
             placeholder="Quem vai atender?"
           />
         </div>
@@ -77,7 +77,7 @@ export function SchedulingForm() {
             type="text" 
             name="protocol" 
             required
-            className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 focus:outline-none focus:ring-2 focus:ring-rose-100 focus:border-rose-500 transition-all text-sm text-zinc-900 placeholder:text-zinc-400"
+            className="w-full px-4 py-2.5 rounded-xl bg-zinc-50 border border-zinc-200 focus:outline-none focus:ring-2 focus:ring-rose-100 focus:border-rose-500 transition-all text-sm text-zinc-900 placeholder:text-zinc-400"
             placeholder="Ex: Limpeza de Pele Profunda"
           />
         </div>
@@ -91,7 +91,7 @@ export function SchedulingForm() {
               type="date" 
               name="date" 
               required
-              className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 focus:outline-none focus:ring-2 focus:ring-rose-100 focus:border-rose-500 transition-all text-sm text-zinc-900"
+              className="w-full px-4 py-2.5 rounded-xl bg-zinc-50 border border-zinc-200 focus:outline-none focus:ring-2 focus:ring-rose-100 focus:border-rose-500 transition-all text-sm text-zinc-900"
             />
           </div>
 
@@ -105,7 +105,7 @@ export function SchedulingForm() {
               required
               min="09:00"
               max="18:00"
-              className="w-full px-4 py-3 rounded-xl bg-zinc-50 border border-zinc-200 focus:outline-none focus:ring-2 focus:ring-rose-100 focus:border-rose-500 transition-all text-sm text-zinc-900"
+              className="w-full px-4 py-2.5 rounded-xl bg-zinc-50 border border-zinc-200 focus:outline-none focus:ring-2 focus:ring-rose-100 focus:border-rose-500 transition-all text-sm text-zinc-900"
             />
           </div>
         </div>
@@ -113,7 +113,7 @@ export function SchedulingForm() {
         <button 
           type="submit" 
           disabled={loading}
-          className="w-full mt-4 flex items-center justify-center gap-2 bg-zinc-900 text-white py-3.5 rounded-xl font-medium text-sm transition-all hover:bg-zinc-800 active:scale-[0.98] disabled:opacity-70"
+          className="w-full mt-2 flex items-center justify-center gap-2 bg-zinc-900 text-white py-3 rounded-xl font-medium text-sm transition-all hover:bg-zinc-800 active:scale-[0.98] disabled:opacity-70"
         >
           {loading ? 'Agendando...' : 'Confirmar Agendamento'}
           {!loading && <ArrowRight className="w-4 h-4" />}
