@@ -14,8 +14,8 @@ export default async function Dashboard() {
   const completed = appointments.filter(a => a.status === 'COMPLETED')
   
   const scheduled = appointments.filter(a => a.status === 'SCHEDULED' || !a.status)
-  const upcoming = scheduled.filter(a => !isBefore(a.dateTime, now))
-  const past = scheduled.filter(a => isBefore(a.dateTime, now))
+  const upcoming = scheduled.filter(a => !isBefore(new Date(a.dateTime), now))
+  const past = scheduled.filter(a => isBefore(new Date(a.dateTime), now))
 
   function ListSection({ title, items, emptyMessage, isPast = false }: { title: string, items: any[], emptyMessage: string, isPast?: boolean }) {
     if (items.length === 0) return null
