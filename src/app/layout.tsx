@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} h-full antialiased`}>
+    <html lang="pt-BR" className={`${inter.variable} h-full antialiased scroll-smooth`}>
       <body className="min-h-full bg-zinc-50 flex flex-col items-center justify-center text-zinc-900">
         {/* Responsive wrapper: Mobile-first column natively, transforming to a dual-pane soft card on Desktop */}
         <div className="w-full lg:max-w-[1000px] min-h-screen lg:min-h-[700px] lg:h-[80vh] flex flex-col lg:flex-row bg-white shadow-none lg:shadow-2xl lg:shadow-zinc-200/50 lg:rounded-[2rem] overflow-hidden relative">
@@ -44,7 +44,7 @@ export default function RootLayout({
           </div>
 
           {/* Main Mobile App Area (also serves as the right pane on Desktop) */}
-          <div className="flex-1 flex flex-col bg-white relative overflow-y-auto">
+          <div className="flex-1 flex flex-col bg-white relative overflow-y-auto scroll-smooth" style={{ WebkitOverflowScrolling: 'touch' }}>
             {/* Mobile Header (Hidden on Desktop) */}
             <header className="lg:hidden px-6 py-5 flex flex-col items-center bg-white z-10 border-b border-zinc-100">
               <div className="mb-2 animate-enter">
