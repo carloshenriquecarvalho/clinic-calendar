@@ -31,9 +31,8 @@ export async function createAppointment(formData: FormData) {
         aestheticianName,
         protocol,
         dateTime,
-        // @ts-ignore - Bypass lock in generation
         status: 'SCHEDULED'
-      } as any,
+      },
     })
     
     revalidatePath('/dashboard')
@@ -83,7 +82,7 @@ export async function updateAppointmentStatus(id: string, status: 'SCHEDULED' | 
   try {
     await prisma.appointment.update({
       where: { id },
-      data: { status } as any, // Bypass TS pending generate
+      data: { status },
     })
     revalidatePath('/dashboard')
     return { success: true }
